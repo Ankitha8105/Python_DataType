@@ -2,24 +2,23 @@
     @Author: Ankitha B L
     @Date:13-11-2024
     @Last Modified by: Ankitha B L
-    @Last Modified Atime: 13- 11-2024
-    @Title: To Find the smallest item from the list problem
+    @Last Modified time: 13- 11-2024
+    @Title: To Multiply all the items in the list problem
 '''
 
-def smallest_item(list_ele):
+def mul_list(list_ele):
     """ 
     Description :
-        This function is used to Find the smallest item from the list
+        This function is used to multiplies all the items in a list.
     Parameters :
         list_ele = List of items
     Return :
-        It returns the Find the smallest item from the list
+        It returns the multiplication of all the items from the list
     """
-    small = list_ele[0]
+    prd = 1
     for i in list_ele:
-        if i < small:
-            small = i
-    return small
+        prd *= i
+    return prd
 
 def main():
     total_val = int(input("Enter the Number of Elements to Store in the List :"))
@@ -30,8 +29,8 @@ def main():
             val = int(input("Enter Item to be inserted into list :"))
             list_ele.append(val)
     
-        smallest = smallest_item(list_ele)
-        print(f"The smallest items in the list is {smallest}")
+        items_mul = mul_list(list_ele)
+        print(f"The multiplication of items in the list are {items_mul}")
     else:
         print("Please Enter correct number")
 
