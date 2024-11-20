@@ -15,16 +15,16 @@ def histogram(list):
     Return :
         It returns count of each element in the list
     """
-    count_l=[]
+    count_l={}
     
-    for i in range(0,len(list)):
-        count = 0
-        for j in range(i,len(list)):
-            if(list[i] == list[j]):
-                count += 1
-        count_l.append(count)
+    for i in list:
+        if i in count_l:
+            count_l[i] += 1
+        else:
+            count_l[i] = 1
 
-    print(count_l)
+    for keys,values in count_l.items():
+        print(f"{keys} {values}")
 
 def main():
     list = [1,3,5,3,1,1,8,9,7,8]
